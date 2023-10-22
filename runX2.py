@@ -10,7 +10,7 @@ targets,passwordlist,loopcracked = [],[],0
 name = "rahul"
 github = "https://github.com/blesseco/"
 facebook = "devrahul63"
- v  = "0.1"
+Version = "0.1"
 
 green = "\x1b[1;92m"
 red = "\x1b[1;91m"
