@@ -47,6 +47,7 @@ def startcrack():
     print(" the process has been started successfully")
     print(" use flightmode if you are using mobile data")
     print(" reboot your router if you are using wi-fi")
+    print(" Version 0.2")
     print("-"*50)
     with ThreadPool(max_workers=30) as eman:
         passwordlist = [
