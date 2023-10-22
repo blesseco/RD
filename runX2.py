@@ -33,6 +33,10 @@ def logo():
 
 def random_number():
     logo()
+    name = "rahul"
+github = "https://github.com/blesseco/"
+facebook = "devrahul63"
+Version = "0.2"
     code = input(f"[{green}+{white}] Input Number Code : ")
     try:
         limit = int(input(f"[{green}+{white}] Input Limit Crack : "))
